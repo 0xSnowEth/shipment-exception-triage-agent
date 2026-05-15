@@ -12,7 +12,7 @@ Query used: `Triage shipment SHP-1001 using the mock data. Classify the exceptio
 
 * Expected:
 
-Agent loads SHP-1001 from `mock_data/shipments.json` and uses `Northstar Medical Supplies`, `$48,000`, expedited, `$5,000` SLA penalty and prioritzes the other details given from the specified mock data.
+Agent loads SHP-1001 from `mock_data/shipments.json` and uses `Northstar Medical Supplies`, `$48,000`, expedited, `$5,000` SLA penalty and prioritizes the other details given from the specified mock data.
 
 * Actual:
 
@@ -30,11 +30,11 @@ Agent used unknown/random information and details:
 
 
 The LLM has provided the final answer using a hypothesis created in the middle of the tool calling, therefore showcasing an output that's irrelevant to the actual details provided in the `mockdata/shipments.json`
--> Unreliable, will defintely mislead a Human operator.
+-> Unreliable, will definitely mislead a human operator.
 
 * How I detected it:
 
-Observed the `tool_calls` mid execution in which it was clear that subagents missed multiple context after they recieved the user's request, therefore asking for required additional details,  the `supervisor` modified the user's requests and filled up the hypthesized details resulting towards the false output shown in the end + Comparing the final result with the details given in `mock_data/shipments.json`
+Observed the `tool_calls` mid-execution. The subagents were missing context after they received the user's request, so the `supervisor` filled in hypothesized details and produced the false final output. I detected it by comparing the final result with the details in `mock_data/shipments.json`.
 
 
 * Fix:

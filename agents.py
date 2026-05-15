@@ -12,7 +12,7 @@ except ImportError:
 from langchain.tools import tool
 from langgraph.types import interrupt
 
-from tools2 import (
+from tools import (
     calculate_eta_delta,
     check_open_complaints,
     check_sla_breach,
@@ -245,9 +245,6 @@ evidence_report = create_agent(
     system_prompt=EVIDENCE_REPORT_PROMPT,
 )
 
-#This agent basically calls 2 tools, in which the first one would be:
-"1. Normalize exception code: In which the sole purpose is to recieve any messt carrier or exception messages and actually put the context into their own labels which it would then call the next following tool:"
-"2. Classify exception type: Which the sole purpose is to recieve the Normalized clear labels of the exception code and classifies them based off of their status in sverity ('high', 'medium', 'low')"
 @tool
 def exception_classifier_agent(request: str) -> str:
     """Classify raw carrier exception details into a normalized logistics exception type."""

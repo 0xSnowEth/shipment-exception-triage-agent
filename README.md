@@ -34,7 +34,7 @@ shipment_exception_supervisor
 Main graph:
 
 ```text
-agents2.py:shipment_exception_supervisor
+agents.py:shipment_exception_supervisor
 ```
 
 Supervisor responsibilities:
@@ -64,8 +64,8 @@ Human-in-the-loop boundary:
 ## Repository Map
 
 ```text
-agents2.py                    supervisor and subagent wrappers
-tools2.py                     deterministic tools and mock persistence actions
+agents.py                     supervisor and subagent wrappers
+tools.py                      deterministic tools and mock persistence actions
 langgraph.json                LangGraph graph export config
 .env.example                  environment variable template
 mock_data/shipments.json      source shipment records

@@ -1,7 +1,7 @@
 {
   "dependencies": ["."],
   "graphs": {
-    "shipment_exception_supervisor": "./agents2.py:shipment_exception_supervisor"
+    "shipment_exception_supervisor": "./agents.py:shipment_exception_supervisor"
   },
   "env": ".env"
 }
