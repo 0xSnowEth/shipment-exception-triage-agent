@@ -1,0 +1,16 @@
+[
+  {
+    "customer_name": "Northstar Medical Supplies",
+    "customer_tier": "enterprise",
+    "account_owner": "Maya Chen",
+    "open_complaints": []
+  },
+  {
+    "customer_name": "Metro Retail Group",
+    "customer_tier": "priority",
+    "account_owner": "Jordan Patel",
+    "open_complaints": [
+      "Customer reported two late deliveries in the last 30 days."
+    ]
+  }
+]

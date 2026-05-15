@@ -1,0 +1,112 @@
+[
+  {
+    "drafts": "Customer-safe communication draft and internal escalation note have been prepared but are held \u2014 NOT sent pending human review and approval.",
+    "evidence": "Shipment SHP-1001 for Acme Corp (Enterprise tier) | Service: Express | Value: $45,000 (Electronics) | Promised Delivery: 2026-05-15T09:00:00Z. Exception: Mechanical delay at Dallas, TX (last event 2026-05-14 13:20 UTC). Classification confidence: High. ETA Delta: +12 hours. SLA Breach Risk: HIGH \u2014 $2,500/day penalty triggered. Value Risk: Moderate-High (45/100). Carrier tracking is fresh; four follow-up questions pending; no auto-dispatch initiated. Customer: Enterprise tier, no open complaints, account owner unknown, SLA penalty data discrepancy in system. Next Actions: (1) Contact carrier for recovery ETA, root cause, and options; (2) Escalate to human review (mandatory); (3) Resolve account owner gap; (4) Set 4-hour stale-tracking watchdog. Customer-safe draft and internal note prepared but NOT sent.",
+    "exception_type": "DELAY",
+    "human_review_required": true,
+    "route": "Carrier Follow-Up \u2192 Human Escalation",
+    "severity": "HIGH",
+    "shipment_id": "SHP-1001",
+    "timestamp": "2026-05-13T14:11:44.178684+00:00"
+  },
+  {
+    "drafts": "Customer-facing message (NOT sent, pending human approval): Proactive notification to Northstar Medical Supplies regarding potential delivery delay with recovery options. Internal ops note (NOT sent, pending human approval): Escalation brief for operations manager detailing mechanical delay, SLA exposure, and alternative carrier authorization request.",
+    "evidence": "Shipment SHP-1001 (Order ORD-7721) for Northstar Medical Supplies (enterprise tier) via RoadFast Freight on route Dallas, TX \u2192 Phoenix, AZ. Exception: mechanical delay at carrier terminal in Dallas. ETA delta: +18 hours (promised 2026-05-15T17:00Z, current ETA 2026-05-16T11:00Z). SLA breach risk HIGH with $5,000 penalty exposure. Shipment value $48,000 USD (medical devices \u2014 sensitivity elevated). Last tracking: \"Departed Dallas terminal\" at 2026-05-14T08:30Z; mechanical delay logged ~5 hrs later at same location; no confirmed forward movement since. Carrier follow-up classified URGENT. Resolution: immediate contact with RoadFast Freight for recovery ETA; escalation to operations manager for potential alternative carrier authorization. Monitoring set to 1-hour polling with auto-escalation if no carrier response within 2 hours. Customer-facing and internal ops communications drafted but held pending human approval. Account owner: Maya Chen; no open complaints on file.",
+    "exception_type": "DELAY",
+    "human_review_required": true,
+    "route": "carrier_followup",
+    "severity": "HIGH",
+    "shipment_id": "SHP-1001",
+    "timestamp": "2026-05-14T01:28:11.390944+00:00"
+  },
+  {
+    "drafts": "CUSTOMER EMAIL (NOT SENT \u2014 pending human approval): Acknowledges severity of the situation, confirms active investigation into delivery dispute, provides reassurance of resolution commitment. No internal details, carrier names, or claim amounts disclosed. INTERNAL OPS NOTE (pending human approval): Full risk context including $18,000 exposure, missing POD, priority customer churn risk (CRITICAL), 3rd incident in 30 days, 9 prioritized action items, carrier 4-hour response SLA, and pre-staged claims workflow.",
+    "evidence": "Shipment SHP-1002 (Order ORD-8840) for Metro Retail Group (priority tier, account owner Jordan Patel). Route: Reno, NV \u2192 San Jose, CA via WestLine Logistics. Shipment value: $18,000 USD (consumer electronics \u2014 high theft target, non-recoverable). Carrier marked delivered at 2026-05-15T18:05 UTC, but customer disputes receipt. POD is MISSING \u2014 no signature, photo, or GPS confirmation. Delivery status: UNVERIFIED. Effective risk score ~85/100. Full $18,000 cargo value at risk. Customer has 2 prior late deliveries in last 30 days (3rd incident in 30 days) \u2014 churn risk HIGH, complaint escalation risk CRITICAL. Resolution: (1) Demand POD/GPS/driver statement from WestLine Logistics within 4-hour SLA, (2) Pre-stage $18,000 cargo claim pending human approval, (3) Escalate to Senior Ops Analyst + account owner Jordan Patel, (4) Tag: POD_DISPUTE, POTENTIAL_MISDELIVERY, HIGH_VALUE, PRIORITY_CUSTOMER, CLAIMS_CANDIDATE, (5) Link to prior 2 incidents for carrier pattern analysis. Customer-facing email and internal ops note drafted but NOT sent \u2014 all communications pending human approval.",
+    "exception_type": "LOST_OR_MISSING_SHIPMENT",
+    "human_review_required": true,
+    "route": "LOST_SHIPMENT_INVESTIGATION",
+    "severity": "HIGH",
+    "shipment_id": "SHP-1002",
+    "timestamp": "2026-05-14T01:39:36.798170+00:00"
+  },
+  {
+    "drafts": "Customer-safe update and internal escalation note drafted \u2014 held for human review. No messages sent.",
+    "evidence": "1. Exception: Carrier (WestLine Logistics) marked delivered at 2026-05-15T18:05 UTC, customer (Metro Retail Group) disputes receipt, POD missing. 2. Impact: ETA data misleading; value risk 60/100; high severity due to potential loss/theft of $18K consumer electronics. 3. Carrier Status: Tracking critically sparse \u2014 only 1 event, no intermediate scans, no POD, no GPS, no receiver name. Misdelivery risk HIGH. 4. Customer Risk: Priority-tier customer with 3 delivery issues in 30 days (pattern). Churn risk HIGH. Account owner Jordan Patel must be looped in. 5. Resolution Plan: (a) Open formal investigation with WestLine Logistics, demand POD/GPS/driver statement within 24h. (b) Escalate to Jordan Patel with full evidence. (c) Flag WestLine for carrier performance review. (d) Decision gate: valid POD resolves; missing POD triggers formal claim. 6. Communications: Customer-safe update and internal escalation note drafted \u2014 NOT sent, held for human review.",
+    "exception_type": "DELIVERY_DISPUTE / Lost or Missing Shipment",
+    "human_review_required": true,
+    "route": "Lost Shipment Investigation + Human Escalation",
+    "severity": "HIGH",
+    "shipment_id": "SHP-1002",
+    "timestamp": "2026-05-14T01:54:02.238443+00:00"
+  },
+  {
+    "drafts": "Customer-safe communication draft prepared but HELD pending customer identity confirmation. Internal ops note drafted for immediate carrier outreach to LakeRoute Freight.",
+    "evidence": "1. Exception Classification: NO_TRACKING_UPDATE (high confidence). Raw code NO_SCAN. No scan since pickup 2026-05-14T07:00:00Z. 2. Impact Assessment: ETA delay indeterminate (missing promised delivery). SLA breach risk unquantifiable. Shipment value $7,600 (low financial risk score). Visibility gap ~46 hours on ~350-mile route. Severity: MEDIUM escalated to HIGH due to compounding unknowns. 3. Carrier Status: Only one pickup scan exists. Physical location unknown. Stale tracking confirmed. Carrier follow-up to LakeRoute Freight required. ETA 2026-05-16T09:00:00Z unvalidated. 4. Customer Risk: Overall HIGH. Unknown customer tier, missing promised delivery, unquantifiable SLA exposure. Human review triggered by system. 5. Resolution Plan: Open lost shipment investigation. Contact LakeRoute Freight immediately. Resolve customer identity and SLA gaps. 4-hour decision gate for full lost-shipment protocol escalation. 6. Communications: Customer-safe draft prepared but HELD. Internal ops note drafted. No messages sent.",
+    "exception_type": "NO_TRACKING_UPDATE",
+    "human_review_required": true,
+    "route": "lost_shipment_investigation",
+    "severity": "HIGH",
+    "shipment_id": "SHP-1003",
+    "timestamp": "2026-05-14T02:06:13.907006+00:00"
+  },
+  {
+    "drafts": "Customer-safe update and internal ops note drafted, held for human approval before sending. Next actions: Demand POD from WestLine Logistics (24-hour SLA); Escalate to account owner Jordan Patel; Pre-stage cargo claim ($18,000); Customer update pending human approval; Carrier performance review flagged.",
+    "evidence": "1. Exception Classification: DELIVERY_DISPUTE / Lost or Missing Shipment. Carrier (WestLine Logistics) marked delivered but customer (Metro Retail Group) disputes receipt. POD is missing. High confidence. 2. Impact Assessment: Severity HIGH. Shipment value $18,000, consumer electronics (high-theft commodity). Priority-tier customer. ETA delta meaningless in dispute scenario. Probable cargo loss or misdelivery. 3. Carrier Status: Tracking sparse \u2014 single delivery mark event at 2026-05-15T18:05 UTC, no pickup scan, no in-transit scans, no POD. Chain of custody unverifiable. Carrier follow-up required: POD retrieval, delivery verification, formal investigation, driver/route log request. 24-hour carrier response SLA set. 4. Customer Risk: HIGH. Metro Retail Group is priority-tier (account owner: Jordan Patel). Open complaints: YES \u2014 two late deliveries in last 30 days. This is the 3rd delivery incident in 30 days. Potential cargo claim up to $18,000. Proactive human review required. 5. Resolution Plan: Lost Shipment Investigation route. Immediate carrier investigation for POD. Escalate to claims & account team. Pre-stage cargo claim file. No financial actions without human approval. Customer communication held for account team review. 6. Communication Drafts: Customer-safe update and internal ops note drafted, held for human approval before sending.",
+    "exception_type": "DELIVERY_DISPUTE / Lost or Missing Shipment",
+    "human_review_required": true,
+    "route": "LOST SHIPMENT INVESTIGATION + HUMAN ESCALATION",
+    "severity": "HIGH",
+    "shipment_id": "SHP-1002",
+    "timestamp": "2026-05-14T06:11:04.520970+00:00"
+  },
+  {
+    "drafts": "Customer-safe update drafted (pending human/account owner review before sending). Internal ops note drafted. Carrier follow-up questions prepared (POD demand, delivery verification, scan gap explanation) with 24hr deadline.",
+    "evidence": "Exception Classification: LOST_OR_MISSING_SHIPMENT (high confidence). Carrier (WestLine Logistics) marked delivered but customer (Metro Retail Group, priority tier) disputes receipt. POD missing. Only 1 tracking scan on record (delivered 2026-05-15T18:05 UTC) with no intermediate scans. High-theft commodity (consumer electronics), $18K value. 3rd delivery issue in 30 days for this customer. SLA breach triggered. Account churn risk HIGH. Claim/chargeback risk HIGH ($18K exceeds auto-approval threshold). Formal investigation required with carrier. Escalation to account owner Jordan Patel mandated. Claims/finance review flagged.",
+    "exception_type": "LOST_OR_MISSING_SHIPMENT",
+    "human_review_required": true,
+    "route": "lost_shipment_investigation",
+    "severity": "HIGH",
+    "shipment_id": "SHP-1002",
+    "timestamp": "2026-05-14T06:25:30.095598+00:00"
+  },
+  {
+    "drafts": "Customer-safe update: Drafted (acknowledges dispute, confirms investigation, commits to 24hr update). Internal operations note: Drafted (full severity summary, 5-point action plan). Both held for human review before dispatch.",
+    "evidence": "Carrier (WestLine Logistics) marked shipment as delivered but customer (Metro Retail Group, Priority tier) disputes receipt. No POD exists. No intermediate tracking scans \u2014 only a delivery mark. Consumer electronics commodity ($18,000 USD) flagged as theft-prone. Functional SLA breach confirmed (non-delivery despite delivery mark). Customer has 2 late deliveries in last 30 days (this is 3rd issue), triggering escalation criteria. Value risk 60/100 with full $18K at risk. Carrier follow-up required: POD demand with 24-hour deadline, GPS logs, driver statement, delivery address verification. Account owner Jordan Patel to be notified. Contingency (reship/credit) pending investigation outcome.",
+    "exception_type": "Lost or Missing Shipment",
+    "human_review_required": true,
+    "route": "lost_shipment_investigation + human_escalation",
+    "severity": "HIGH",
+    "shipment_id": "SHP-1002",
+    "timestamp": "2026-05-14T06:41:56.753270+00:00"
+  },
+  {
+    "drafts": "Customer update communication drafted but held pending human approval. Carrier claim preparation drafted for human evaluation.",
+    "evidence": "Carrier: WestLine Logistics | Customer: Metro Retail Group (priority tier, account owner: Jordan Patel) | Value: $18,000 USD consumer electronics | Route: Reno, NV \u2192 San Jose, CA | Service: standard | Promised delivery: 2026-05-15T20:00:00+00:00 | SLA penalty: $0 | Exception: DELIVERED_DISPUTE normalized to DELIVERY_DISPUTE / LOST OR MISSING SHIPMENT (High confidence) | Key factors: No POD, customer disputes receipt, high-value electronics | ETA delta: -2 hours (carrier marked early delivery) | SLA breach risk: Low (time-based) but misleading since goods not received | Value risk: Moderate-High (60/100) \u2014 full $18,000 exposure | POD: Completely missing (no signature, GPS, photo, or driver notes) | Tracking: Abnormally sparse \u2014 no pickup, in-transit, or intermediate scans | Customer risk: CRITICAL \u2014 open complaint, 3rd delivery issue in 30 days, critical churn risk | Escalation required to account owner Jordan Patel | Next actions: Formal carrier investigation (24-hr SLA for response), internal escalation to Jordan Patel, carrier claim preparation recommended for human evaluation, proactive customer outreach pending approval | Compliance: No financial remedies approved or initiated; all claims/credits/replacements prepared for human review only; customer update drafted but requires human approval before sending.",
+    "exception_type": "DELIVERY_DISPUTE / LOST OR MISSING SHIPMENT",
+    "human_review_required": true,
+    "route": "Lost Shipment Investigation (with Human Escalation)",
+    "severity": "HIGH",
+    "shipment_id": "SHP-1002",
+    "timestamp": "2026-05-14T06:52:50.364275+00:00"
+  },
+  {
+    "drafts": "Customer-safe update: Acknowledges dispute, confirms active investigation, commits to follow-up within 24-48 hrs. Internal operations note: Flags HIGH severity, CRITICAL customer retention risk, carrier accountability demands, and need for human decision on financial remediation and claim filing.",
+    "evidence": "Carrier (WestLine Logistics) marked delivered 2026-05-15T18:05 UTC but customer (Metro Retail Group) disputes receipt. POD is MISSING. Only single tracking event with no intermediate scans. ETA delta -2.0 hrs (disputed/unreliable). Value risk score 60/100, financial exposure up to $18,000 (consumer electronics). Customer is priority tier with CRITICAL risk \u2014 3rd delivery issue in 30 days (pattern of systemic service failure). Churn risk HIGH. Account owner: Jordan Patel. Immediate actions: demand signed POD/GPS/driver statement/photo from carrier within 24-48 hrs, open formal investigation, escalate to human reviewer. Pending human authorization: carrier formal claim ($18,000), customer financial remediation, proactive outreach, carrier penalty/enforcement. No financial actions approved or initiated. Customer-safe update and internal ops note drafted but not sent.",
+    "exception_type": "DELIVERY_DISPUTE",
+    "human_review_required": true,
+    "route": "Lost Shipment Investigation with mandatory Human Escalation",
+    "severity": "HIGH",
+    "shipment_id": "SHP-1002",
+    "timestamp": "2026-05-15T08:00:17.819563+00:00"
+  },
+  {
+    "drafts": "CUSTOMER DRAFT: Customer-safe update acknowledging the delivery dispute, confirming an active investigation with the carrier, and committing to follow-up within 24 hours. No financial promises or claim details included. INTERNAL OPS DRAFT: Internal note summarizing the missing POD, sparse tracking, $18,000 exposure, priority customer risk, carrier investigation timeline, and recommended next steps (claim filing, customer accommodation, carrier review). Both drafts pending human approval before release.",
+    "evidence": "SHIPMENT: SHP-1002 (Order ORD-8840). Customer: Metro Retail Group (priority tier). Carrier: WestLine Logistics. Route: Reno, NV \u2192 San Jose, CA. Commodity: consumer electronics, value $18,000. Service level: standard. Promised delivery: 2026-05-15T20:00:00Z. EXCEPTION: Carrier marked delivered at 2026-05-15T18:05:00Z, customer disputes receipt, POD completely missing (no signature, GPS, photos, driver log). Tracking critically sparse \u2014 only one event recorded (delivery mark), no intermediate scans. CLASSIFICATION: DELIVERY_DISPUTE / LOST OR MISSING SHIPMENT (high confidence). IMPACT: Severity HIGH. $18,000 cargo at risk. No SLA penalty but full cargo claim exposure. Priority customer with 3rd delivery issue in 30 days \u2014 significant retention risk. Consumer electronics is high-theft commodity. CUSTOMER RISK: HIGH. Account owner: Jordan Patel. SLA system flags repeated disputes requiring escalation. RESOLUTION: Routed to Lost Shipment Investigation + Human Escalation. Formal investigation opened with WestLine Logistics demanding POD within 24 hours. Cargo claim documentation prepared \u2014 pending human authorization only. Account owner notification recommended. Carrier performance review flagged. HUMAN REVIEW REQUIRED for: (1) cargo claim filing ($18,000), (2) any interim customer accommodation, (3) carrier performance hold decision. COMMUNICATIONS: Customer-safe update and internal ops note drafted \u2014 both pending human approval. No financial actions initiated or approved.",
+    "exception_type": "DELIVERY_DISPUTE / LOST OR MISSING SHIPMENT",
+    "human_review_required": true,
+    "route": "Reno, NV \u2192 San Jose, CA",
+    "severity": "HIGH",
+    "shipment_id": "SHP-1002",
+    "timestamp": "2026-05-15T11:15:47.964776+00:00"
+  }
+]

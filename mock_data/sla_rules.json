@@ -1,0 +1,14 @@
+[
+  {
+    "customer_name": "Northstar Medical Supplies",
+    "service_level": "expedited",
+    "penalty_amount_usd": 5000,
+    "penalty_condition": "Any delivery after promised delivery timestamp requires account manager review."
+  },
+  {
+    "customer_name": "Metro Retail Group",
+    "service_level": "standard",
+    "penalty_amount_usd": 0,
+    "penalty_condition": "No contractual penalty, but repeated delivery disputes require escalation."
+  }
+]

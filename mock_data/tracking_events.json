@@ -1,0 +1,26 @@
+[
+  {
+    "shipment_id": "SHP-1001",
+    "event_time": "2026-05-14T08:30:00+00:00",
+    "location": "Dallas, TX",
+    "message": "Departed Dallas terminal"
+  },
+  {
+    "shipment_id": "SHP-1001",
+    "event_time": "2026-05-14T13:20:00+00:00",
+    "location": "Dallas, TX",
+    "message": "Mechanical delay reported"
+  },
+  {
+    "shipment_id": "SHP-1002",
+    "event_time": "2026-05-15T18:05:00+00:00",
+    "location": "San Jose, CA",
+    "message": "Carrier marked delivered; POD missing"
+  },
+  {
+    "shipment_id": "SHP-1003",
+    "event_time": "2026-05-14T07:00:00+00:00",
+    "location": "Chicago, IL",
+    "message": "Picked up by carrier"
+  }
+]
