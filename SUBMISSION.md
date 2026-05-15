@@ -3,7 +3,7 @@
 Name: Ahmed "Harvey"
 
 GitHub repo:
-https://github.com/0xSnowEth/shipment-exception-triage-agent
+https://github.com/HarveyAGH/shipment-exception-triage-agent
 
 Demo video:
 https://app.airtimetools.com/recorder/s/z_NSSd9oVPB3Err7TkVN1W
