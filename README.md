@@ -2,9 +2,6 @@
 
 LangGraph/LangChain prototype for triaging logistics shipment exceptions with a supervisor-subagent architecture, deterministic tools, mock operational data, evidence logging, and human approval before customer-facing action.
 
-Demo video:
-https://app.airtimetools.com/recorder/s/z_NSSd9oVPB3Err7TkVN1W
-
 ## Problem
 
 Logistics operators often triage shipment exceptions manually across carrier tracking, customer records, SLA rules, and internal communication channels. This creates slow response times, inconsistent escalation decisions, and risky customer updates when evidence is incomplete.
